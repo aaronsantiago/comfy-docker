@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 
 FROM aarondot/comfy-base:latest
+
+RUN apt-get update && apt-get install -y curl wget
 WORKDIR /app
 
 RUN wget -O comfy/models/diffusion_models/Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan2_1-FLF2V-14B-720P_fp8_e4m3fn.safetensors?download=true
