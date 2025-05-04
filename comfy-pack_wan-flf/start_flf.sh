@@ -1,4 +1,4 @@
-comfy --workspace=comfy --background launch -- --listen 0.0.0.0
+comfy --workspace=comfy launch --background -- --listen 0.0.0.0
 sleep 10s
 curl 'http://0.0.0.0:8188/api/bentoml/serve' \
   -H 'Accept: */*' \
